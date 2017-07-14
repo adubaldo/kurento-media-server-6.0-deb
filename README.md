@@ -1,16 +1,17 @@
 # kurento-media-server-6.0-deb
-Offline deb package of kurento-media-server-6.0
+Get deb package of kurento-media-server-6.0 for offline installation!
 
 ## MACHINE WITH INTERNET CONNECTION
 
 **requirements**
-apt-rdepends : sudo apt-get install apt-rdepends
+apt-rdepends :
+`sudo apt-get install apt-rdepends`
 
 1) Update and Upgrade your machine
 
 `sudo apt-get update && sudo apt-get upgrade`
 
-2) Create a bash script "kms-repo.sh" 
+2) Create a bash script "*kms-repo.sh*" 
 
 ```javascript
 # Add the Kurento Packages Repository
@@ -25,7 +26,7 @@ wget http://ubuntu.kurento.org/kurento.gpg.key -O - | apt-key add -
 apt-get update
 ```
 
-3) Create a bash script "kms-depends.sh"
+3) Create a bash script "*kms-depends.sh*"
 
 ```javascript
 PACKAGE="kurento-media-server-6.0"
