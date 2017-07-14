@@ -1,10 +1,8 @@
 # kurento-media-server-6.0-deb
 Offline deb package of kurento-media-server-6.0
 
-
---
 # MACHINE WITH INTERNET CONNECTION
---
+
 **requirements**
 apt-rdepends : sudo apt-get install apt-rdepends
 
@@ -14,7 +12,6 @@ apt-rdepends : sudo apt-get install apt-rdepends
 
 2) Create a bash script "kms-repo.sh" 
 
----------------[kms-repo.sh]---------------
 `
 \# Add the Kurento Packages Repository
 \# For Ubuntu 14.04 (Trusty), use "trusty-dev" for "development" repo
@@ -27,11 +24,9 @@ EOF
 wget http://ubuntu.kurento.org/kurento.gpg.key -O - | apt-key add -
 apt-get update
 `
--------------------------------------------
 
 3) Create a bash script "kms-depends.sh"
 
----------------[kms-depends.sh]---------------
 `
 PACKAGE="kurento-media-server-6.0"
 DEPENDS=$(apt-rdepends "$PACKAGE" 2>/dev/null | grep -v '^ ') 
@@ -40,7 +35,6 @@ for D in $DEPENDS; do
   apt-get download "$D"
 done
 `
-----------------------------------------------
 4) Change file permissions
 `sudo chmod +x kms-repo.sh && sudo chmod +x kms-depends.sh`
 
@@ -52,9 +46,8 @@ done
 
 6) Copy all \*.deb in the folder kms-debs and transfer to you offline machine
 
---
 # MACHINE WITHOUT INTERNET CONNECTION
---
+
 7) Install all deb files.
 
 `cd kms-debs
