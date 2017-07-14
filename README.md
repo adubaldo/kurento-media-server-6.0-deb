@@ -1,7 +1,11 @@
 # kurento-media-server-6.0-deb
 Get deb package of kurento-media-server-6.0 for offline installation!
 
-## MACHINE WITH INTERNET CONNECTION
+Tested with:
+- kms-6.0
+- Ubuntu 14.04 Trusty
+
+## Machine with internet connection
 
 **requirements**
 apt-rdepends :
@@ -48,9 +52,9 @@ When finished
 `sudo ./kms-depends.sh`
 
 
-6) Copy all \*.deb in the folder kms-debs and transfer to you offline machine
+6) Copy all \*.deb from the folder **kms-debs** and transfer them to your offline machine
 
-## MACHINE WITHOUT INTERNET CONNECTION
+## Machine with NO-internet connection
 
 7) Install all deb files.
 
