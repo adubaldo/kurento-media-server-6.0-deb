@@ -13,12 +13,12 @@ apt-rdepends : sudo apt-get install apt-rdepends
 2) Create a bash script "kms-repo.sh" 
 
 ```javascript
-\# Add the Kurento Packages Repository
-\# For Ubuntu 14.04 (Trusty), use "trusty-dev" for "development" repo
-\# For Ubuntu 16.04 (Xenial) , use "xenial" or "xenial-dev" 
+# Add the Kurento Packages Repository
+# For Ubuntu 14.04 (Trusty), use "trusty-dev" for "development" repo
+# For Ubuntu 16.04 (Xenial) , use "xenial" or "xenial-dev" 
 REPO="trusty"  
 tee /etc/apt/sources.list.d/kurento-${REPO}.list > /dev/null <<EOF
-\# Kurento Packages repository
+# Kurento Packages repository
 deb http://ubuntu.kurento.org ${REPO} kms6
 EOF
 wget http://ubuntu.kurento.org/kurento.gpg.key -O - | apt-key add -
@@ -57,4 +57,4 @@ When finished
 sudo dpkg -i *.deb
 `
 
-thanks to @j1elo to help me [on this!](https://mail.google.com/mail/u/0/#inbox/15d3bdb0ea160b5e)
+thanks to [@j1elo](https://github.com/j1elo) to help me [on this!](https://mail.google.com/mail/u/0/#inbox/15d3bdb0ea160b5e)
